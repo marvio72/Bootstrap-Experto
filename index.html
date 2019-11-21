@@ -20,6 +20,9 @@
     body{
       font-family: 'Dosis', sans-serif;
     }
+    /* .row>*{
+      border: 1px solid red;
+    } */
   </style>
   
 </head>
@@ -27,32 +30,56 @@
 
 <body>
   
-  <section class="bg-light p-3 border">
-    <div class="container">
-      <div class="row justify-content-md-between">
-        <div class="col-12 col-md-auto">
-          <a href="#">
-            <img src="images/logo.svg" alt="Logo" width="120">
-          </a>
-        </div>
-        <div class="col-12 col-md-auto">
-        <form action="" role="form" class="form-inline">
-            <label for="nombre" class="sr-only">Nombre</label>
-            <div class="input-group mb-2 mb-sm-0 mr-sm-1">
+  <div class="container mt-3">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-9">
+        <form action="  " class="border rounded bg-light p-3 my-3">
+          <h2 class="mb-3">Solicitud de Soporte</h2>
+          <!-- Campo Nombre -->
+          <div class="form-group form-row">
+            <label for="nombre" class="col-12 col-md-2 col-form-label">Nombre:</label>
+            <div class="input-group col-12 col-md-10">
               <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></div>
-              <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre de usuario" size="15">
+              <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese su nombre">
             </div>
-            <label for="password" class="sr-only">Password</label>
-            <div class="input-group mb-2 mb-sm-0 mr-sm-1">
-              <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-lock"></i></span></div>
-              <input type="text" name="password" id="password" class="form-control" placeholder="Contraseña" size="15">
+          </div>
+          <!-- Campo email -->
+          <div class="form-group form-row">
+            <label for="email" class="col-12 col-md-2 col-form-label">Email:</label>
+            <div class="input-group col-12 col-md-10">
+              <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-envelope"></i></span>
+              </div>
+              <input type="email" name="email" id="email" class="form-control" placeholder="Ingrese su email">
             </div>
-            <button type="submit" class="btn btn-primary">Ingresar</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+          </div>
+          
+          <!-- Campo Mensaje  -->
+          <div class="form-group form-row">
+            <label for="mensaje" class="col-12 col-md-2 col-form-label align-self-center">Mensaje:</label>
+            <div class="input-group col-12 col-md-10">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-comment"></i></span>
+              </div>
+              <textarea id="mensaje" class="form-control" name="mensaje" rows="5"></textarea>
+            </div>
+          </div>
+
+          <!-- Aceptar Términos y condiciones -->
+          <div class="form-group form-row">
+            <div class="col-auto offset-md-2">
+              <div class="form-check form-check-inline">
+                <input type="checkbox" name="condiciones" id="condiciones" value="si" class="form-check-input">
+                <label for="condiciones" class="form-check-label">Acepto los términos y condiciones</label>
+              </div>
+            </div>
+          </div>
+          <!-- Botones -->
+          <div class="form-group text-left mb-0 form-row">
+            <div class="col-auto offset-md-2">
+              <button type="submit" class="btn btn-primary mr-2">Enviar</button>
+              <button type="reset" class="btn btn-secondary">Limpiar</button>
+            </div>
+          </div>
   
 
   <!-- Carga de Jquery -->
