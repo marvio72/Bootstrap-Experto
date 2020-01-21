@@ -12,13 +12,13 @@
   <!-- Carga del CSS de Font Awesome -->
   <link rel="stylesheet" href="css/all.css">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
 
   <title>SONRISAS | Cuidamos tus dientes.</title>
 
   <style>
     body{
-      font-family: 'Dosis', sans-serif;
+      font-family: 'Open Sans', sans-serif;
     }
     /* .row>*{
       border: 1px solid red;
@@ -30,56 +30,127 @@
 
 <body>
   
-  <div class="container mt-3">
+  <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-9">
         <form action="  " class="border rounded bg-light p-3 my-3">
-          <h2 class="mb-3">Solicitud de Soporte</h2>
-          <!-- Campo Nombre -->
-          <div class="form-group form-row">
-            <label for="nombre" class="col-12 col-md-2 col-form-label">Nombre:</label>
-            <div class="input-group col-12 col-md-10">
-              <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></div>
-              <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese su nombre">
+          <h2 class="mb-3">Formulario de Pedido</h2>
+          <!-- INFORMACION PERSONAL -->
+          <div class="form-row">
+            <h4 class="col-12 text-info">
+              <span class="fa-stack h5 mb-0">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-user fa-stack-1x fa-inverse"></i>  
+              </span>
+              Información personal
+            </h4>
+
+            <div class="form-group col-12 col-sm-6">
+              <label for="nombre">Nombre:</label>
+              <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ejem: Marco Rafael...">
             </div>
-          </div>
-          <!-- Campo email -->
-          <div class="form-group form-row">
-            <label for="email" class="col-12 col-md-2 col-form-label">Email:</label>
-            <div class="input-group col-12 col-md-10">
-              <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-envelope"></i></span>
-              </div>
-              <input type="email" name="email" id="email" class="form-control" placeholder="Ingrese su email">
+            
+            <div class="form-group col-12 col-sm-6">
+              <label for="apellidos">Apellidos:</label>
+              <input type="text" name="apellidos" id="apellidos" class="form-control" placeholder="Ejem: Ruiz Cortinez...">
             </div>
+
+            <div class="form-group col-12 col-sm-6">
+              <label for="email">Email:</label>
+              <input type="email" name="email" id="email" class="form-control" placeholder="Ejem: usuario@gmail.com...">
+            </div>
+
+            <div class="form-group col-12 col-sm-6">
+              <label for="telefono">Teléfono:</label>
+              <input type="text" name="telefono" id="telefono" class="form-control" placeholder="Ejem: 512-32425465">
+            </div>
+
           </div>
-          
-          <!-- Campo Mensaje  -->
-          <div class="form-group form-row">
-            <label for="mensaje" class="col-12 col-md-2 col-form-label align-self-center">Mensaje:</label>
-            <div class="input-group col-12 col-md-10">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-comment"></i></span>
+
+          <!-- DIRECCION DE ENVÍO -->
+          <div class="form-row">
+            <h4 class="col-12 text-info">
+              <span class="fa-stack h5 mb-0">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-map-marker-alt fa-stack-1x fa-inverse"></i>
+              </span>
+              Dirección de envío
+            </h4>
+
+            <div class="form-group col-12">
+              <label for="direccion">Dirección:</label>
+              <input type="text" name="direccion" id="direccion" class="form-control" placeholder="Av. Compositores...">
+            </div>
+
+            <div class="form-group col-6 col-sm-4">
+              <label for="estado">Estado:</label>
+              <input type="text" name="estado" id="estado" class="form-control"
+                placeholder="Ejem: Jalisco...">
+            </div>
+
+            <div class="form-group col-6 col-sm-4">
+              <label for="ciudad">Ciudad:</label>
+              <input type="text" name="ciudad" id="ciudad" class="form-control" placeholder="Ejem: usuario@gmail.com...">
+            </div>
+
+            <div class="form-group col-12 col-sm-4">
+              <label for="codigo-postal">Código Postal:</label>
+              <input type="text" name="codigo-postal" id="codigo-postal" class="form-control" placeholder="Ejem: 45645">
+            </div>
+
+          </div>
+
+          <!-- FECHA DE ENVIO -->
+          <div class="form-row">
+            <h4 class="col-12 text-info">
+              <span class="fa-stack h5 mb-0">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-calendar-alt fa-stack-1x fa-inverse"></i>
+              </span>
+              Fecha de envio
+            </h4>
+
+            <div class="col-12 col-md-6">
+
+              <div class="form-row">
+
+                <div class="form-group col-12 col-sm-6 col-md-12">
+                  <label for="fecha">Fecha de envío</label>
+                  <input type="text" name="fecha" id="fecha" class="form-control" placeholder="Ejem: 11/09/2020">
+                </div>
+    
+                <div class="form-group col-12 col-sm-6 col-md-12 ">
+                  <label for="hora">Hora de envío:</label>
+                  <input type="text" name="hora" id="hora" class="form-control" placeholder="Ejem: 11:39">
+                </div>
+
               </div>
-              <textarea id="mensaje" class="form-control" name="mensaje" rows="5"></textarea>
+            </div>
+
+            <div class="form-group col-12 col-md-6">
+              <label for="comentarios">Comentarios:</label>
+              <textarea name="comentarios" id="comentarios" rows="5" placeholder="Tenemos problemas..." class="form-control"></textarea>
+            </div>
+
+          </div>
+
+          <!-- BOTONES -->
+          <div class="form-row">
+
+            <div class="col-12 col-md-3">
+              <button type="submit" class="btn btn-primary btn-block mb-2"><i
+                  class="fas fa-location-arrow pr-1"></i>Enviar</button>
+            </div>
+            <div class="col-12 col-md-3">
+              <button type="reset" class="btn btn-secondary btn-block"><i class="fas fa-times pr-1"></i>Cancelar</button>
             </div>
           </div>
 
-          <!-- Aceptar Términos y condiciones -->
-          <div class="form-group form-row">
-            <div class="col-auto offset-md-2">
-              <div class="form-check form-check-inline">
-                <input type="checkbox" name="condiciones" id="condiciones" value="si" class="form-check-input">
-                <label for="condiciones" class="form-check-label">Acepto los términos y condiciones</label>
-              </div>
-            </div>
-          </div>
-          <!-- Botones -->
-          <div class="form-group text-left mb-0 form-row">
-            <div class="col-auto offset-md-2">
-              <button type="submit" class="btn btn-primary mr-2">Enviar</button>
-              <button type="reset" class="btn btn-secondary">Limpiar</button>
-            </div>
-          </div>
+
+
+
+
+
         </form>
       </div>
     </div>
