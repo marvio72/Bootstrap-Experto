@@ -7,6 +7,7 @@
 /*Fondos*/
 $principal: #275D8C 
 $secundario: #01223F 
+$tercero: #FFFFFF
 
 /*Textos*/
 $texto: #013059 
@@ -32,7 +33,10 @@ body
   2. ESTILOS GENERALES DE BOTONES
   --------------------------------*/
 
-//.btn
+.btn
+  border-radius: 2rem
+  padding: .6rem 2rem
+  font-weight: bold  
 
 /*----------------------------------
   3. ESTILOS COLOR PRINCIPAL
@@ -42,6 +46,64 @@ body
   
 .text-primary 
   color: $principal !important
+
+/*Estilos btn-primary*/
+.btn-primary
+  color: $redes_texto
+  background-color: $principal
+  border-color: $principal
+  position: relative
+  overflow: hidden
+  z-index: 1
+  transition: all .5s ease
+
+.btn-primary:hover
+  color: $texto
+  background-color: $tercero
+  border-color: $principal
+
+.btn-primary:active
+  color: $texto !important
+  background-color: lighten($principal, 5%) !important
+  border-color: lighten($principal, 8%) !important
+
+.btn-primary:focus
+  box-shadow: 0 0 0 0.2rem rgba($principal,.5) !important
+  color: $texto
+
+/*Insertamos la flecha del boton principal*/
+.btn-primary:after
+  font-family: 'Font Awesome 5 Free'
+  content: '\f138'
+  font-weight: 900
+  position: relative
+  left: .6rem
+  top: .08rem
+  transition: left .3s ease
+
+.btn-primary:hover:after,
+.btn-primary:active:after,
+.btn-primary:focus:after
+  left: .25rem
+
+/*Insertamos la caja blanca del boton principal*/
+.btn-primary:before
+  content: ""
+  z-index: -1
+  width: 0
+  height: 100%
+  background: $tercero
+  position: absolute
+  left: 50%
+  top: 0
+  transform: skew(45deg,0)
+  transition: all .3s ease
+
+.btn-primary:hover:before,
+.btn-primary:active:before,
+.btn-primary:focus:before
+  width: 120%
+  left: -10%
 
 /*----------------------------------
   4. ESTILOS COLOR SECUNDARIO
@@ -82,7 +144,7 @@ body
   outline: 0
 
   /*Estilos boton del menu personalizado*/
-#menu-navegacion .boton-menu::before
+#menu-navegacion .boton-menu::before 
   font-family: 'Font Awesome 5 Free'
   content: '\f0c9'
   font-weight: 900
@@ -122,7 +184,7 @@ body
 /*Modifica los botones del menu*/
 .navbar-dark .navbar-nav .nav-link
   padding: .7rem 1.2rem
-  border-radius: 1.5rem
+  border-radius: 2rem
 
 /*Quitar la flecha al final de cada boton del menu*/
 @media (min-width: 768px) 

@@ -18,6 +18,11 @@ body {
 /*----------------------------------
  * 2. ESTILOS GENERALES DE BOTONES
  * -------------------------------- */
+.btn {
+  border-radius: 2rem;
+  padding: 0.6rem 2rem;
+  font-weight: bold; }
+
 /*----------------------------------
  * 3. ESTILOS COLOR PRINCIPAL
  * --------------------------------- */
@@ -26,6 +31,69 @@ body {
 
 .text-primary {
   color: #275D8C !important; }
+
+/*Estilos btn-primary */
+.btn-primary {
+  color: #FFFFFF;
+  background-color: #275D8C;
+  border-color: #275D8C;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.btn-primary:hover {
+  color: #013059;
+  background-color: #FFFFFF;
+  border-color: #275D8C; }
+
+.btn-primary:active {
+  color: #013059 !important;
+  background-color: #2d6aa0 !important;
+  border-color: #3072ac !important; }
+
+.btn-primary:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(39, 93, 140, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(39, 93, 140, 0.5) !important;
+  color: #013059; }
+
+/*Insertamos la flecha del boton principal */
+.btn-primary:after {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 900;
+  position: relative;
+  left: 0.6rem;
+  top: 0.08rem;
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease; }
+
+.btn-primary:hover:after,
+.btn-primary:active:after,
+.btn-primary:focus:after {
+  left: 0.25rem; }
+
+/*Insertamos la caja blanca del boton principal */
+.btn-primary:before {
+  content: "";
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  background: #FFFFFF;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: skew(45deg, 0);
+          transform: skew(45deg, 0);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+.btn-primary:hover:before,
+.btn-primary:active:before,
+.btn-primary:focus:before {
+  width: 120%;
+  left: -10%; }
 
 /*----------------------------------
  * 4. ESTILOS COLOR SECUNDARIO
@@ -109,12 +177,13 @@ body {
 /*----------------------------------
  * X MEDIAS QUERIES
  * -------------------------------- */
-@media (min-width: 768px) {
 /*Modifica los botones del menu */
-  .navbar-dark .navbar-nav .nav-link {
-    padding: 0.7rem 1.2rem;
-    border-radius: 1.5rem; }
+.navbar-dark .navbar-nav .nav-link {
+  padding: 0.7rem 1.2rem;
+  border-radius: 2rem; }
+
 /*Quitar la flecha al final de cada boton del menu */
+@media (min-width: 768px) {
   .navbar-dark .navbar-nav .nav-link:after {
     content: ""; } }
 
