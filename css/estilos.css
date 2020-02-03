@@ -135,12 +135,18 @@ body {
   outline: 0;
   /*Estilos boton del menu personalizado */ }
 
-#menu-navegacion .boton-menu::before {
+#menu-navegacion .boton-menu:before {
   font-family: "Font Awesome 5 Free";
   content: "";
   font-weight: 900;
   font-size: 2rem;
-  color: #FFFFFF;
+  color: #FFFFFF; }
+
+/*Boton cerrar menu cuando agregamos la clase ".icono-cerrar" */
+#menu-navegacion .icono-cerrar:before {
+  content: "";
+  position: relative;
+  left: 0.2rem;
   /*Estilos de los enlaces del #menu-navegacion */ }
 
 .navbar-dark .navbar-nav .nav-link {

@@ -143,13 +143,20 @@ body
   border-radius: 0
   outline: 0
 
+
   /*Estilos boton del menu personalizado*/
-#menu-navegacion .boton-menu::before 
+#menu-navegacion .boton-menu:before 
   font-family: 'Font Awesome 5 Free'
   content: '\f0c9'
   font-weight: 900
   font-size: 2rem
   color: $redes_texto
+
+/*Boton cerrar menu cuando agregamos la clase ".icono-cerrar"*/
+#menu-navegacion .icono-cerrar:before
+  content: '\f00d'
+  position: relative
+  left: .2rem
 
   /*Estilos de los enlaces del #menu-navegacion*/
 .navbar-dark .navbar-nav .nav-link 
