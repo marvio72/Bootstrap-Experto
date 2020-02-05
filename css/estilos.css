@@ -59,7 +59,7 @@ body {
   color: #013059; }
 
 /*Insertamos la flecha del boton principal */
-.btn-primary:after {
+.btn-primary::after {
   font-family: "Font Awesome 5 Free";
   content: "";
   font-weight: 900;
@@ -69,13 +69,13 @@ body {
   -webkit-transition: left 0.3s ease;
   transition: left 0.3s ease; }
 
-.btn-primary:hover:after,
-.btn-primary:active:after,
-.btn-primary:focus:after {
+.btn-primary:hover::after,
+.btn-primary:active::after,
+.btn-primary:focus::after {
   left: 0.25rem; }
 
 /*Insertamos la caja blanca del boton principal */
-.btn-primary:before {
+.btn-primary::before {
   content: "";
   z-index: -1;
   width: 0;
@@ -89,9 +89,9 @@ body {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
-.btn-primary:hover:before,
-.btn-primary:active:before,
-.btn-primary:focus:before {
+.btn-primary:hover::before,
+.btn-primary:active::before,
+.btn-primary:focus::before {
   width: 120%;
   left: -10%; }
 
@@ -135,7 +135,7 @@ body {
   outline: 0;
   /*Estilos boton del menu personalizado */ }
 
-#menu-navegacion .boton-menu:before {
+#menu-navegacion .boton-menu::before {
   font-family: "Font Awesome 5 Free";
   content: "";
   font-weight: 900;
@@ -143,7 +143,7 @@ body {
   color: #FFFFFF; }
 
 /*Boton cerrar menu cuando agregamos la clase ".icono-cerrar" */
-#menu-navegacion .icono-cerrar:before {
+#menu-navegacion .icono-cerrar::before {
   content: "";
   position: relative;
   left: 0.2rem;
@@ -161,7 +161,7 @@ body {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
 
-.navbar-dark .navbar-nav .nav-link:after {
+.navbar-dark .navbar-nav .nav-link::after {
   font-family: "Font Awesome 5 Free";
   content: "";
   font-weight: 900;
@@ -180,6 +180,74 @@ body {
 .navbar-dark .navbar-nav .nav-link.active {
   background-color: #275D8C; }
 
+/*--------------------------------------------------------------
+ * 7. ESTILOS PARA "#animacion"
+ * ------------------------------------------------------------- */
+.swiper-slide {
+  height: 34rem;
+  text-align: center;
+  color: #FFFFFF;
+  background-size: cover;
+  background-position: center center; }
+
+/*Poner una capa transparente como filtro para dar una apariencia mas obscura */
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  background: black;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.1; }
+
+#slide3::before {
+  opacity: 0.6; }
+
+/*Cambiamos el estilo de los botones para cambiar las imagenes */
+.swiper-button-prev,
+.swiper-button-next {
+  color: transparent;
+  background-color: rgba(39, 93, 140, 0.3);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease; }
+
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 900;
+  color: #FFFFFF;
+  position: relative;
+  left: 0.83rem; }
+
+/*Gira 180 grados el boton derecha */
+.swiper-button-next::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+/*Cambio de color al colocar el mouse encima propiedad hover */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(255, 255, 255, 0.7); }
+
+.swiper-button-prev:hover::before,
+.swiper-button-next:hover::before {
+  color: #275D8C; }
+
+/*Estilos para el paginador */
+.swiper-pagination-bullet {
+  background: #FFFFFF;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.5rem !important; }
+
+.swiper-pagination-bullet-active {
+  background-color: #275D8C; }
+
 /*----------------------------------
  * X MEDIAS QUERIES
  * -------------------------------- */
@@ -190,7 +258,17 @@ body {
 
 /*Quitar la flecha al final de cada boton del menu */
 @media (min-width: 768px) {
-  .navbar-dark .navbar-nav .nav-link:after {
+  .navbar-dark .navbar-nav .nav-link::after {
     content: ""; } }
+/*Cambiar el tamaño de texto y altura de swiper */
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px; }
+
+  .swiper-slide {
+    height: 37.5rem; } }
+@media (min-width: 1200px) {
+  .swiper-slide {
+    height: 44rem; } }
 
 /*# sourceMappingURL=estilos.css.map */
