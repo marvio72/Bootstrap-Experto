@@ -248,6 +248,50 @@ body {
 .swiper-pagination-bullet-active {
   background-color: #275D8C; }
 
+/*--------------------------------------------------------------
+ * 8. ESTILOS PARA "#bienvenidos"
+ * ------------------------------------------------------------- */
+.contenedor-video a {
+  background-color: rgba(255, 255, 255, 0.79);
+  color: #275D8C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-clip: padding-box;
+  border: 0 solid transparent;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.contenedor-video a:hover {
+  color: #FFFFFF;
+  background-color: #275D8C;
+  border: thick solid rgba(255, 255, 255, 0.5); }
+
+/*Aumenta el tamaño de la imagen */
+.contenedor-video img {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.contenedor-video:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2); }
+
 /*----------------------------------
  * X MEDIAS QUERIES
  * -------------------------------- */
@@ -261,7 +305,7 @@ body {
   .navbar-dark .navbar-nav .nav-link::after {
     content: ""; } }
 /*Cambiar el tamaño de texto y altura de swiper */
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   html {
     font-size: 16px; }
 

@@ -41,14 +41,27 @@ $(function() {
     grabCursor: true,
     loop: true,
     /*Autoplay*/
-    // autoplay: {
-    //   delay: 5000,
-    // },
+    autoplay: {
+      delay: 5000,
+    },
     /*keyboard*/
     keyboard: {
       enable: true,
       onlyInViewport: true,
     }
   });
+
+  /*==============================================================================================
+  3. SCRIPT PARA "venobox"
+  ==============================================================================================*/
+    $('.venobox-video').venobox({
+      autoplay: true,
+      bgcolor: 'rgba(255,255,255,.4)',
+      overlayColor: 'rgba(38, 93, 140, .6)',
+      spinner:'cube-grid',
+      border: '4px',
+      spinColor: 'black',
+      titleattr: 'data-title'
+    });
 
 });

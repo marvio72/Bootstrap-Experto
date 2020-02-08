@@ -248,6 +248,44 @@ body
 
 .swiper-pagination-bullet-active
   background-color: $principal
+
+
+/*--------------------------------------------------------------
+  8. ESTILOS PARA "#bienvenidos"
+  -------------------------------------------------------------*/
+.contenedor-video a
+  background-color: rgba($tercero, .79)
+  color: $principal
+  display: flex
+  width: 5rem
+  height: 5rem
+  border-radius: 50%
+  font-size: 2rem
+  justify-content: center
+  align-items: center
+  text-decoration: none
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+  background-clip: padding-box
+  border: 0 solid transparent
+  transition: all .5s ease
+
+.contenedor-video a:hover
+  color: $tercero
+  background-color: $principal
+  border: thick solid rgba($tercero,.5)
+
+
+/*Aumenta el tamaño de la imagen*/
+.contenedor-video img
+  transition: all .5s ease
+
+.contenedor-video:hover img
+  transform: scale(1.2)
+
+
   
 /*----------------------------------
   X MEDIAS QUERIES
@@ -264,7 +302,7 @@ body
     content: ""
 
 /*Cambiar el tamaño de texto y altura de swiper*/
-@media (min-width: 1024px)
+@media (min-width: 992px)
   html
     font-size: 16px
   
