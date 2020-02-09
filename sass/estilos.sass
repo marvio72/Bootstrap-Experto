@@ -29,6 +29,7 @@ html
 body 
   font-family: 'Arial'
   color: $texto
+  height: 5000px
 /*----------------------------------
   2. ESTILOS GENERALES DE BOTONES
   --------------------------------*/
@@ -285,21 +286,48 @@ body
 .contenedor-video:hover img
   transform: scale(1.2)
 
+/*--------------------------------------------------------------
+  9. ESTILOS PARA "#te-ayudamos"
+  -------------------------------------------------------------*/
+#te-ayudamos
+  position: relative
+  transform: skewY(6deg)
+  overflow: hidden
+
+#te-ayudamos::before
+  content: ""
+  position: absolute
+  background: rgba(0, 0, 0, .5)
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+
+#te-ayudamos .container
+  transform: skewY(-6deg)
+
 
   
 /*----------------------------------
   X MEDIAS QUERIES
   --------------------------------*/
 
-/*Modifica los botones del menu*/
-.navbar-dark .navbar-nav .nav-link
-  padding: .7rem 1.2rem
-  border-radius: 2rem
-
-/*Quitar la flecha al final de cada boton del menu*/
+/* Quitar la flecha al final de cada boton del menu*/
 @media (min-width: 768px) 
-  .navbar-dark .navbar-nav .nav-link::after
+  .navbar-dark .navbar-nav .nav-link 
+    padding: .7rem 1.2rem
+    border-radius: 2rem
+
+  /* Modifica los botones del menu*/  
+  .navbar-dark .navbar-nav .nav-link::after 
     content: ""
+    
+  /* Hace que la pendiente sea mas corta*/
+  #te-ayudamos
+    transform: skewY(3deg)
+
+  #te-ayudamos .container
+    transform: skewY(-3deg)
 
 /*Cambiar el tamaño de texto y altura de swiper*/
 @media (min-width: 992px)

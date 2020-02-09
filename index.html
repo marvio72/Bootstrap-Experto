@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="css/swiper.min.css">
   <!-- Venobox -->
   <link rel="stylesheet" href="css/venobox.css">
+  <!-- Jarallax-->
+  <link rel="stylesheet" href="css/jarallax.css">
   <!-- Carga del CSS personalizado-->
   <link rel="stylesheet" href="css/estilos.css">
 
@@ -143,7 +145,10 @@
       <div class="swiper-pagination"></div>
   </section>
 
-  <!-- Sección Bienvenidos -->
+  <!--***************   *** Comentario *** ****************
+  Seccion "#bienvenidos"
+  /*****************   *** ********** *** ****************-->
+  
   <section id="bienvenidos" class="py-5">
     <div class="container">
       <div class="row">
@@ -171,6 +176,26 @@
     </div>
   </section>
 
+  <!--***************   *** Comentario *** ****************
+  Sección "#te-ayudamos"
+  /*****************   *** ********** *** ****************-->
+  <section id="te-ayudamos" class="bg-secondary text-white text-center py-5 jarallax" data-jarallax data-speed="-0.5">
+    <picture class="jarallax-img">
+      <source media="(min-width:1200px)" srcset="images/oversistemas/ayuda-tecnica3.jpg">
+      <source media="(min-width:768px)" srcset="images/oversistemas/ayuda-tecnica1.jpg">
+      <img srcset="images/oversistemas/ayuda-tecnica2.jpg" alt="Fondo como podemos ayudarte" class="w-100">
+    </picture>
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-12">
+          <h2 class="display-4 font-weight-bold">¿CÓMO PODEMOS AYUDARTE?</h2>
+          <p>Te brindamos la mejor asesoria técnica para cubrir tus necesidades</p>
+          <a href="#" class="btn btn-primary">Añadir un reporte</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Carga de Jquery -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <!-- Carga de Popper -->
@@ -181,6 +206,10 @@
   <script src="js/swiper.min.js"></script>
   <!-- Carga "Venobox"-->
   <script src="js/venobox.min.js"></script>
+  <!-- Carga "Jarallax" -->
+  <script src="js/jarallax.min.js"></script>
+  <!-- Carga "Picturefill" -->
+  <script src="js/picturefill.min.js"></script>
   <!--Archivo que contiene los scripts personalizados-->
   <script src="js/mis_scripts.js"></script>
 </body>
