@@ -29,7 +29,7 @@ html
 body 
   font-family: 'Arial'
   color: $texto
-  height: 5000px
+  // height: 5000px
 /*----------------------------------
   2. ESTILOS GENERALES DE BOTONES
   --------------------------------*/
@@ -306,8 +306,26 @@ body
 #te-ayudamos .container
   transform: skewY(-6deg)
 
+/*--------------------------------------------------------------
+  10. ESTILOS PARA "#logros"
+  -------------------------------------------------------------*/
+.contador-linea
+  background-color: $principal
+  width: 4rem
+  height: .4rem
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translateX(-50%)
+  transition: all .5s ease
 
-  
+#logros .col-6:hover .contador-linea
+  bottom: 1rem
+  transform: translateX(-50%) rotate(180deg)
+  background-color: $secundario
+
+
+
 /*----------------------------------
   X MEDIAS QUERIES
   --------------------------------*/

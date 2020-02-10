@@ -13,8 +13,7 @@ html {
 
 body {
   font-family: "Arial";
-  color: #013059;
-  height: 5000px; }
+  color: #013059; }
 
 /*----------------------------------
  * 2. ESTILOS GENERALES DE BOTONES
@@ -314,6 +313,27 @@ body {
 #te-ayudamos .container {
   -webkit-transform: skewY(-6deg);
           transform: skewY(-6deg); }
+
+/*--------------------------------------------------------------
+ * 10. ESTILOS PARA "#logros"
+ * ------------------------------------------------------------- */
+.contador-linea {
+  background-color: #275D8C;
+  width: 4rem;
+  height: 0.4rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+#logros .col-6:hover .contador-linea {
+  bottom: 1rem;
+  -webkit-transform: translateX(-50%) rotate(180deg);
+          transform: translateX(-50%) rotate(180deg);
+  background-color: #01223F; }
 
 /*----------------------------------
  * X MEDIAS QUERIES
