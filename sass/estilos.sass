@@ -29,7 +29,7 @@ html
 body 
   font-family: 'Arial'
   color: $texto
-  // height: 5000px
+  height: 5000px
 /*----------------------------------
   2. ESTILOS GENERALES DE BOTONES
   --------------------------------*/
@@ -323,6 +323,21 @@ body
   bottom: 1rem
   transform: translateX(-50%) rotate(180deg)
   background-color: $secundario
+
+/*--------------------------------------------------------------
+  11. ESTILOS PARA "#nuestra-app"
+  -------------------------------------------------------------*/
+#nuestra-app
+  position: relative
+
+#nuestra-app::before
+  content: ""
+  position: absolute
+  background: rgba(0, 0, 0, .7)
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
 
 
 
