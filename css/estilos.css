@@ -351,6 +351,19 @@ body {
   top: 0;
   bottom: 0; }
 
+/*--------------------------------------------------------------
+ * 12. ESTILOS PARA "#contacto"
+ * ------------------------------------------------------------- */
+#contacto .cuadrado {
+  position: absolute;
+  display: inline;
+  width: 2rem;
+  height: 2rem;
+  background: #275D8C;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 50%) rotate(45deg);
+          transform: translate(-50%, 50%) rotate(45deg); }
+
 /*----------------------------------
  * X MEDIAS QUERIES
  * -------------------------------- */
