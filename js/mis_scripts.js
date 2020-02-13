@@ -68,4 +68,41 @@ $(function() {
   4. SCRIPT PARA "jquery.counterup"
   ==============================================================================================*/
   $('.counter').counterUp();
+
+  /*==============================================================================================
+  5. SCRIPT PARA "pickadate.js"
+  ==============================================================================================*/
+  /*Date picker*/
+  $('.datepicker').pickadate({
+    monthsFull: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+    monthsShort: ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'],
+    weekdaysFull: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+    weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],
+    today: 'Hoy',
+    clear: 'Borrar',
+    close: 'Cerrar',
+    labelMonthNext: 'Siguiente mes',
+    labelMonthPrev: 'Mes anterior',
+    labelMonthSelect: 'Selecciona un mes',
+    labelYearSelect: 'Selecciona un año',
+    firstDay: 1,
+    format: 'dddd, d !de mmmm !de yyyy',
+    formatSubmit: 'dd/mm/yyyy',
+    selectYears: 10,
+    selectMonths: true,
+    min: true,
+    max: false,
+    onStart: function () {
+      var date = new Date();
+      this.set('select', [date.getFullYear(), date.getMonth(), date.getDate()]);
+    }
+  });
+  /*Time picker*/
+  $('.timepicker').pickatime({
+    format: 'h:i a',
+    clear: 'Borrar',
+    interval: 60,
+    min: [9,0],
+    max: [18,0]
+  });
 });

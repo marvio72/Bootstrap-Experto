@@ -9,6 +9,7 @@
 $principal: #275D8C 
 $secundario: #01223F 
 $tercero: #FFFFFF
+$boton-borrar: #E20
 
 /*Textos*/
 $texto: #013059 
@@ -37,7 +38,7 @@ html
 body 
   font-family: 'Arial'
   color: $texto
-  height: 5000px
+  // height: 5000px
 /*----------------------------------
   2. ESTILOS GENERALES DE BOTONES
   --------------------------------*/
@@ -359,6 +360,51 @@ body
   bottom: 0
   transform: translate(-50%,50%) rotate(45deg)
 
+.input-group-reporte
+  margin-bottom: 0
+  cursor: pointer
+  
+/* ESTILOS PARA PICKADATE*/
+.picker__box
+  border: 5px solid $principal
+
+.picker--focused .picker__day--selected, 
+.picker__day--selected, 
+.picker__day--selected:hover
+  background: $principal
+  color: $redes_texto
+  
+.picker__day--today:before
+  border-top: .5em solid $redes_texto
+
+.picker__select--month,
+.picker__select--year
+  margin-top: -.5em
+  padding: 0 .5rem
+  border-radius: .5rem
+
+/* ESTILOS PARA TIMEPICKER*/
+.picker--focused .picker__list-item--selected, 
+.picker__list-item--selected, 
+.picker__list-item--selected:hover
+  background: $principal
+
+.picker__list-item--highlighted,
+.picker__list-item:hover
+  border-color: darken($principal, 10%)
+
+.picker__list
+  padding: .5rem 0
+
+.picker--time .picker__button--clear
+  color: $secundario
+  border-radius: .5rem
+  background-color: lighten($boton-borrar,40%)
+  transition: all .8s ease
+
+.picker__button--clear:before 
+    width: 0
+    display: none
 
 
 

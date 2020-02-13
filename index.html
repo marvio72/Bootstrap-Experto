@@ -19,6 +19,14 @@
   <link rel="stylesheet" href="css/venobox.css">
   <!-- Jarallax-->
   <link rel="stylesheet" href="css/jarallax.css">
+  <!-- Pickadate.js-->
+  <link rel="stylesheet" href="js/pickadate.js/themes/default.css">
+  <!-- "Date Picker"-->
+  <link rel="stylesheet" href="js/pickadate.js/themes/default.date.css">
+  <!-- "Time Picker"-->
+  <link rel="stylesheet" href="js/pickadate.js/themes/default.time.css">
+
+
   <!-- Carga del CSS personalizado-->
   <link rel="stylesheet" href="css/estilos.css">
 
@@ -179,7 +187,7 @@
   <!--***************   *** Comentario *** ****************
   Sección "#te-ayudamos"
   /*****************   *** ********** *** ****************-->
-  <section id="te-ayudamos" class="bg-secondary text-white text-center py-5 jarallax" data-jarallax data-speed="-0.3">
+  <section id="te-ayudamos" class="bg-secondary text-white text-center py-5 jarallax" data-jarallax data-speed="-0.5">
     <picture class="jarallax-img">
       <source media="(min-width:1200px)" srcset="images/oversistemas/ayuda-tecnica3.jpg">
       <source media="(min-width:768px)" srcset="images/oversistemas/ayuda-tecnica1.jpg">
@@ -249,7 +257,7 @@
   <!--***************   *** Comentario *** ****************
   Seccion #nuestra-app
   /*****************   *** ********** *** ****************-->
-  <section id="nuestra-app" class="bg-primary text-center text-md-left text-white jarallax" data-jarallax data-speed="-0.1">
+  <section id="nuestra-app" class="bg-primary text-center text-md-left text-white jarallax" data-jarallax data-speed="-0.3">
     <picture class="jarallax-img">
       <source media="(min-width:1200px)" srcset="images/oversistemas/app-oversistemas-xl.jpg">
       <source media="(min-width:768px)" srcset="images/oversistemas/app-oversistemas-md.jpg">
@@ -355,10 +363,11 @@
               <div class="col-12 col-md-9">
                 
                 <div class="input-group">
-                  <input type="date" name="fecha-reporte" id="fecha-reporte" class="form-control">
-                  <div class="input-group-append">
+                  <input type="date" name="fecha-reporte" id="fecha-reporte" class="form-control datepicker">
+
+                  <label  for="fecha-reporte" class="input-group-append input-group-reporte">
                     <span class="input-group-text"><i class="fas fa-calendar-day fa-fw text-primary"></i></span>
-                  </div>
+                  </label>
                 </div>
               </div>
             </div>
@@ -369,10 +378,10 @@
               <div class="col-12 col-md-9">
 
                 <div class="input-group">
-                  <input type="text" name="hora-reporte" id="hora-reporte" class="form-control">
-                  <div class="input-group-append">
+                  <input type="text" name="hora-reporte" id="hora-reporte" class="form-control timepicker">
+                  <label for="hora-reporte" class="input-group-append input-group-reporte">
                     <span class="input-group-text"><i class="fas fa-clock fa-fw text-primary"></i></i></span>
-                  </div>
+                  </label>
                 </div>
               </div>
             </div>
@@ -404,10 +413,17 @@
   <script src="js/jarallax.min.js"></script>
   <!-- Carga "Picturefill" -->
   <script src="js/picturefill.min.js"></script>
-  <!-- Carga "Jquery.Waypoints" -->
+  <!-- Carga "Jquery.Waypoints | Necesario para que funcione counterup" -->
   <script src="js/jquery.waypoints.min.js"></script>
-  <!-- Carga "Jquery.Counterup" -->
+  <!-- Carga "Jquery.Counterup | Crea un contador" -->
   <script src="js/jquery.counterup.min.js"></script>
+  <!-- Carga "picker.js | Crea el selector de fecha y hora" -->
+  <script src="js/pickadate.js/picker.js"></script>
+  <!-- Carga "picker.date.js | Crea el selector de fecha" -->
+  <script src="js/pickadate.js/picker.date.js"></script>
+  <!-- Carga "picker.time.js | Crea el selector de hora" -->
+  <script src="js/pickadate.js/picker.time.js"></script>
+
   <!--Archivo que contiene los scripts personalizados-->
   <script src="js/mis_scripts.js"></script>
 </body>

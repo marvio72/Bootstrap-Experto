@@ -14,8 +14,7 @@ html {
 
 body {
   font-family: "Arial";
-  color: #013059;
-  height: 5000px; }
+  color: #013059; }
 
 /*----------------------------------
  * 2. ESTILOS GENERALES DE BOTONES
@@ -364,6 +363,53 @@ body {
   bottom: 0;
   -webkit-transform: translate(-50%, 50%) rotate(45deg);
           transform: translate(-50%, 50%) rotate(45deg); }
+
+.input-group-reporte {
+  margin-bottom: 0;
+  cursor: pointer; }
+
+/* ESTILOS PARA PICKADATE */
+.picker__box {
+  border: 5px solid #275D8C; }
+
+.picker--focused .picker__day--selected,
+.picker__day--selected,
+.picker__day--selected:hover {
+  background: #275D8C;
+  color: #FFFFFF; }
+
+.picker__day--today:before {
+  border-top: 0.5em solid #FFFFFF; }
+
+.picker__select--month,
+.picker__select--year {
+  margin-top: -0.5em;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem; }
+
+/* ESTILOS PARA TIMEPICKER */
+.picker--focused .picker__list-item--selected,
+.picker__list-item--selected,
+.picker__list-item--selected:hover {
+  background: #275D8C; }
+
+.picker__list-item--highlighted,
+.picker__list-item:hover {
+  border-color: #1c4364; }
+
+.picker__list {
+  padding: 0.5rem 0; }
+
+.picker--time .picker__button--clear {
+  color: #01223F;
+  border-radius: 0.5rem;
+  background-color: #ffc5bb;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease; }
+
+.picker__button--clear:before {
+  width: 0;
+  display: none; }
 
 /*----------------------------------
  * X MEDIAS QUERIES
