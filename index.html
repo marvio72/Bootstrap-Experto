@@ -313,7 +313,79 @@
             </li>
           </ul>
         </div>
-        <div class="col-12 col-lg-6">Columna2</div>
+        <!--FORMULARIO-->
+        <div class="col-12 col-lg-6 pt-4">
+          <h2 class="text-center font-weight-bold mb-5">Añade un reporte:</h2>
+          <form action="#" id="mi-formulario">
+            <!--Campo #nombre-->
+            <div class="form-group form-row">
+              <label for="nombre" class="col-form-label col-12 col-md-3">Nombre:</label>
+              <div class="col-12 col-md-9">
+                <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingresa tu nombre" required>
+              </div>
+            </div>
+
+            <!--Campo #email-->
+            <div class="form-group form-row">
+              <label for="email" class="col-form-label col-12 col-md-3">Email:</label>
+              <div class="col-12 col-md-9">
+                <input id="email " class="form-control" type="email" name="email " placeholder="Ingresa tu email" required>
+              </div>
+            </div>
+
+            <!--Campo #celular-->
+            <div class="form-group form-row">
+              <label for="celular" class="col-form-label col-12 col-md-3">Celular:</label>
+              <div class="col-12 col-md-9">
+                <input id="celular" class="form-control" type="number" name="celular " placeholder="Ingresa tu celular" required>
+              </div>
+            </div>
+
+            <!--Campo #mensaje-->
+            <div class="form-group form-row">
+              <label for="mensaje" class="col-form-label col-12 col-md-3">Mensaje:</label>
+              <div class="col-12 col-md-9">
+                <textarea class="form-control" name="mensaje" id="mensaje" rows="4" placeholder="Ingresa tu mensaje." required></textarea>
+              </div>
+            </div>
+
+            <!--Campo #fecha-reporte-->
+            <div class="form-group form-row">
+              <label for="fecha-reporte" class="col-form-label col-12 col-md-3">Fecha:</label>
+              <div class="col-12 col-md-9">
+                
+                <div class="input-group">
+                  <input type="date" name="fecha-reporte" id="fecha-reporte" class="form-control">
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="fas fa-calendar-day fa-fw text-primary"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!--Campo #hora-reporte-->
+            <div class="form-group form-row">
+              <label for="hora-reporte" class="col-form-label col-12 col-md-3">Hora:</label>
+              <div class="col-12 col-md-9">
+
+                <div class="input-group">
+                  <input type="text" name="hora-reporte" id="hora-reporte" class="form-control">
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="fas fa-clock fa-fw text-primary"></i></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Campo enviar-->
+            <div class="form-group form-row my-4 ">
+              <div class="col-12 col-md-9 offset-md-3">
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Enviar</button>
+              </div>
+            </div>
+            
+          </form>
+        </div>
       </div>
     </div>
   </section> 

@@ -1,7 +1,4 @@
 @charset "UTF-8";
-.row > * {
-  border: 1px solid #e41c1c; }
-
 /*--------------------------------------------------------------
  * PATRONES DE COLORES
  * ------------------------------------------------------------ */
@@ -368,7 +365,6 @@ body {
   -webkit-transform: translate(-50%, 50%) rotate(45deg);
           transform: translate(-50%, 50%) rotate(45deg); }
 
-/*INFORMACIÓN */
 /*----------------------------------
  * X MEDIAS QUERIES
  * -------------------------------- */
