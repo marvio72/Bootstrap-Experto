@@ -187,7 +187,7 @@
   <!--***************   *** Comentario *** ****************
   Sección "#te-ayudamos"
   /*****************   *** ********** *** ****************-->
-  <section id="te-ayudamos" class="bg-secondary text-white text-center py-5 jarallax" data-jarallax data-speed="-0.5">
+  <section id="te-ayudamos" class="bg-secondary text-white text-center py-5 jarallax" data-jarallax data-speed="-0.9">
     <picture class="jarallax-img">
       <source media="(min-width:1200px)" srcset="images/oversistemas/ayuda-tecnica3.jpg">
       <source media="(min-width:768px)" srcset="images/oversistemas/ayuda-tecnica1.jpg">
@@ -257,7 +257,7 @@
   <!--***************   *** Comentario *** ****************
   Seccion #nuestra-app
   /*****************   *** ********** *** ****************-->
-  <section id="nuestra-app" class="bg-primary text-center text-md-left text-white jarallax" data-jarallax data-speed="-0.3">
+  <section id="nuestra-app" class="bg-primary text-center text-md-left text-white jarallax" data-jarallax data-speed="0.05">
     <picture class="jarallax-img">
       <source media="(min-width:1200px)" srcset="images/oversistemas/app-oversistemas-xl.jpg">
       <source media="(min-width:768px)" srcset="images/oversistemas/app-oversistemas-md.jpg">
@@ -322,14 +322,14 @@
           </ul>
         </div>
         <!--FORMULARIO-->
-        <div class="col-12 col-lg-6 pt-4">
+        <div class="col-12 col-lg-6 pt-4 pt-lg-0">
           <h2 class="text-center font-weight-bold mb-5">Añade un reporte:</h2>
           <form action="#" id="mi-formulario">
             <!--Campo #nombre-->
             <div class="form-group form-row">
               <label for="nombre" class="col-form-label col-12 col-md-3">Nombre:</label>
               <div class="col-12 col-md-9">
-                <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingresa tu nombre" required>
+                <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingresa tu nombre" data-parsley-required data-parsley-required-message="Este campo no puede estar vacio.">
               </div>
             </div>
 
@@ -337,7 +337,9 @@
             <div class="form-group form-row">
               <label for="email" class="col-form-label col-12 col-md-3">Email:</label>
               <div class="col-12 col-md-9">
-                <input id="email " class="form-control" type="email" name="email " placeholder="Ingresa tu email" required>
+                <input id="email " type="" class="form-control" name="email " placeholder="Ingresa tu email" data-parsley-required data-parsley-type="email"
+                data-parsley-required-message="Este campo no puede esar vacio."
+                data-parsley-type-message="Ingrese un email en un formato válido.">
               </div>
             </div>
 
@@ -345,7 +347,10 @@
             <div class="form-group form-row">
               <label for="celular" class="col-form-label col-12 col-md-3">Celular:</label>
               <div class="col-12 col-md-9">
-                <input id="celular" class="form-control" type="number" name="celular " placeholder="Ingresa tu celular" required>
+                <input id="celular" class="form-control" type="text" name="celular " placeholder="Ingresa tu celular" data-parsley-required
+                data-parsley-length="[5, 20]"
+                data-parsley-required-message="Este campo no puede esar vacio."
+                data-parsley-lenght-message="El número teléfonico debe tener entre 5 y 20 caracteres">
               </div>
             </div>
 
@@ -353,7 +358,8 @@
             <div class="form-group form-row">
               <label for="mensaje" class="col-form-label col-12 col-md-3">Mensaje:</label>
               <div class="col-12 col-md-9">
-                <textarea class="form-control" name="mensaje" id="mensaje" rows="4" placeholder="Ingresa tu mensaje." required></textarea>
+                <textarea class="form-control" name="mensaje" id="mensaje" rows="4" placeholder="Ingresa tu mensaje" data-parsley-required
+                data-parsley-required-message="Este campo no puede esar vacio."></textarea>
               </div>
             </div>
 
@@ -363,12 +369,16 @@
               <div class="col-12 col-md-9">
                 
                 <div class="input-group">
-                  <input type="date" name="fecha-reporte" id="fecha-reporte" class="form-control datepicker">
+                  <input type="date" name="fecha-reporte" id="fecha-reporte" class="form-control datepicker"
+                    data-parsley-required
+                    data-parsley-required-message="Este campo no puede esar vacio."
+                    data-parsley-errors-container=".error-fecha-reporte">
 
                   <label  for="fecha-reporte" class="input-group-append input-group-reporte">
                     <span class="input-group-text"><i class="fas fa-calendar-day fa-fw text-primary"></i></span>
                   </label>
                 </div>
+                <div class="error-fecha-reporte"></div>
               </div>
             </div>
             
@@ -378,11 +388,15 @@
               <div class="col-12 col-md-9">
 
                 <div class="input-group">
-                  <input type="text" name="hora-reporte" id="hora-reporte" class="form-control timepicker">
+                  <input type="text" name="hora-reporte" id="hora-reporte" class="form-control timepicker"
+                    data-parsley-required
+                    data-parsley-required-message="Este campo no puede esar vacio."
+                    data-parsley-errors-container=".error-hora-reporte">
                   <label for="hora-reporte" class="input-group-append input-group-reporte">
                     <span class="input-group-text"><i class="fas fa-clock fa-fw text-primary"></i></i></span>
                   </label>
                 </div>
+                <div class="error-hora-reporte"></div>
               </div>
             </div>
 
@@ -423,6 +437,10 @@
   <script src="js/pickadate.js/picker.date.js"></script>
   <!-- Carga "picker.time.js | Crea el selector de hora" -->
   <script src="js/pickadate.js/picker.time.js"></script>
+  <!-- Carga "parsley.min.js | Valida formularios" -->
+  <script src="js/parsley.min.js"></script>
+  <!-- Carga "parsley.es.js | Cambia idioma de parsley a español" -->
+  <script src="js/parsley.es.js"></script>
 
   <!--Archivo que contiene los scripts personalizados-->
   <script src="js/mis_scripts.js"></script>
