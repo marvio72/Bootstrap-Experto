@@ -179,7 +179,14 @@ body {
   /*Estilos para el enlace activo */ }
 
 .navbar-dark .navbar-nav .nav-link.active {
-  background-color: #275D8C; }
+  background-color: #275D8C;
+  /*Estilos para ".menu-fijo" */ }
+
+.menu-fijo {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: #000f1c !important;
+  width: 100% !important; }
 
 /*--------------------------------------------------------------
  * 7. ESTILOS PARA "#animacion"
