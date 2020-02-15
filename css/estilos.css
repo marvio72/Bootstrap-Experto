@@ -411,6 +411,29 @@ body {
   width: 0;
   display: none; }
 
+/*--------------------------------------------------------------
+ * 13.footer
+ *  ------------------------------------------------------------- */
+.columna-inclinada::before {
+  content: "";
+  position: absolute;
+  background-color: #275D8C;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: -100%; }
+
+.enlace-secundario {
+  border-bottom: 1px solid #647686;
+  -webkit-box-shadow: 0 1px #13171a;
+          box-shadow: 0 1px #13171a; }
+
+.enlace-secundario a {
+  padding: 1rem;
+  color: white;
+  display: block;
+  text-decoration: none; }
+
 /*----------------------------------
  * X MEDIAS QUERIES
  * -------------------------------- */
@@ -431,7 +454,13 @@ body {
 
   #te-ayudamos .container {
     -webkit-transform: skewY(-3deg);
-            transform: skewY(-3deg); } }
+            transform: skewY(-3deg); }
+
+  .columna-inclinada::before {
+    left: -300px;
+    right: 0;
+    -webkit-transform: skewX(20deg);
+            transform: skewX(20deg); } }
 /*Cambiar el tamaño de texto y altura de swiper */
 @media (min-width: 992px) {
   html {
