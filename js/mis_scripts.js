@@ -124,4 +124,12 @@ $(function() {
   $('#menu-navegacion').stickit({
     className: 'menu-fijo'
   });
+
+/*==============================================================================================
+8. SCRIPT "Page-scroll-to-id"
+==============================================================================================*/
+  $("#menu-principal a").mPageScroll2id({
+    offset: 50,
+    highlightClass: 'active'
+  });
 });
