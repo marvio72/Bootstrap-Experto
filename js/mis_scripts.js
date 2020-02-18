@@ -88,7 +88,7 @@ $(function() {
     firstDay: 1,
     format: 'dddd, d !de mmmm !de yyyy',
     formatSubmit: 'dd/mm/yyyy',
-    selectYears: 10,
+    selectYears: true,
     selectMonths: true,
     min: true,
     max: false,

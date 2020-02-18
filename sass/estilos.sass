@@ -436,8 +436,27 @@ body
   display: block
   text-decoration: none
 
+/*--------------------------------------------------------------
+  14. Estilos para ie 11 
+  -------------------------------------------------------------*/
+.ie11 #bienvenidos .contenedor-video img
+  width: 100%
 
+.ie11 #contacto .cuadrado
+  margin-left: 50%
 
+.ie11 .swiper-button-next,
+.ie11 .swiper-button-prev
+  justify-content: space-around
+
+.ie11 #animacion .swiper-slide .container
+  margin-left: 0
+
+/*--------------------------------------------------------------
+  15. Estilos para firefox
+  -------------------------------------------------------------*/
+.firefox body
+  line-height: 1rem
 
 /*----------------------------------
   X MEDIAS QUERIES
@@ -461,7 +480,7 @@ body
     transform: skewY(-3deg)
 
   .columna-inclinada::before
-    left: -300px
+    left: -450px
     right: 0
     transform: skewX(20deg)
 
