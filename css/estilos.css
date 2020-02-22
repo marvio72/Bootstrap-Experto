@@ -13,7 +13,7 @@ html {
   font-size: 13px; }
 
 body {
-  font-family: "Arial";
+  font-family: "Lato", sans-serif;
   color: #013059; }
 
 /*----------------------------------
@@ -363,7 +363,7 @@ body {
  * ------------------------------------------------------------- */
 #contacto .cuadrado {
   position: absolute;
-  display: inline;
+  display: inline-block;
   width: 2rem;
   height: 2rem;
   background: #275D8C;
