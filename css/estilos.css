@@ -463,6 +463,8 @@ body {
  * ------------------------------------------------------------- */
 .firefox body {
   line-height: 1rem; }
+  .firefox body #menu-navegacion {
+    margin-bottom: -1px; }
 
 /*----------------------------------
  * X MEDIAS QUERIES
