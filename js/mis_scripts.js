@@ -159,37 +159,88 @@ $(function () {
   });
 
   //--------------------------------
-  //	Enviar Info de campos a PHP
+  //	Enviar correo por PHP
   //--------------------------------
 
-  //TODO: Indicamos mediante una variable donde se encuentra nuestro formulario.
-
   const formulario = document.getElementById("mi-formulario");
-
-  //TODO: Creamos una variable para cada uno de los campos.
-
   const nombre = document.getElementById("nombre");
   const email = document.getElementById("email");
   const celular = document.getElementById("celular");
   const mensaje = document.getElementById("mensaje");
+  const boton = document.getElementById("enviar");
 
-  //TODO: Creamos una función que se este leyendo cada ves que se presione el boton de envio.
   formulario.addEventListener("submit", (e) => {
     e.preventDefault();
     e.stopPropagation();
 
-    // console.log("Hola estoy haciendo pruebas");
-
-    //TODO: Creamos una variable que contenga todo el contenido del formulario
     const data = new FormData(formulario);
 
-    //TODO: Enviaos informacion de javascript a PHP
     fetch("./php/formulario.php", {
       method: "POST",
       body: data,
     })
       .then((res) => res.json())
-      .then((datos) => console.log(datos))
+      .then((datos) => {
+        console.log(datos);
+
+        // TODO: Validación que regresa php
+        if (datos.error && datos.campo === "nombre") {
+          campoError(nombre);
+          return;
+        }
+        campoValido(nombre);
+
+        if (datos.error && datos.campo === "email") {
+          campoError(email);
+          return;
+        }
+        campoValido(email);
+
+        if (datos.error && datos.campo === "celular") {
+          campoError(celular);
+          return;
+        }
+        campoValido(celular);
+
+        if (datos.error && datos.campo === "mensaje") {
+          campoError(mensaje);
+          return;
+        }
+        campoValido(mensaje);
+
+        console.log("llego a comprobar");
+        console.log(datos.error);
+        if (!datos.error) {
+          limpiaFormulario();
+          //TODO: Mensaje enviado
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Correo Enviado",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      })
       .catch((e) => console.log(e));
   });
+
+  const campoError = (campo) => {
+    campo.classList.add("is-invalid");
+    campo.classList.remove("is-valid");
+  };
+
+  const campoValido = (campo) => {
+    campo.classList.add("is-valid");
+    campo.classList.remove("is-invalid");
+  };
+
+  const limpiaFormulario = () => {
+    console.log("mensaje enviado con éxito");
+    formulario.reset();
+    nombre.classList.remove("is-valid");
+    email.classList.remove("is-valid");
+    celular.classList.remove("is-valid");
+    mensaje.classList.remove("is-valid");
+  };
 });
