@@ -1,8 +1,15 @@
 <?php
+include('connection.php');
+$con = connection();
 
+// $sql = "SELECT * FROM contacto";
+// $query = mysqli_query($con, $sql);
+
+// echo json_encode('Hasta aqui todo bien');
 
 if($_POST){
     // TODO: Declaramos variables
+    $id = null;
     $nombre = '';
     $email = '';
     $celular = '';
@@ -57,37 +64,54 @@ if($_POST){
         return;
     }
 
-    // TODO: Cuerpo del mensaje
-    $cuerpo = 'Nombre: ' . $nombre . '<br>';
-    $cuerpo .= 'Email: ' . $email . '<br>';
-    $cuerpo .= 'Celular: ' . $celular . '<br>';
-    $cuerpo .= 'Mensaje: ' . $mensaje . '<br>';
+    //--------------------------------
+    //	TODO: Agregar registro en base de datos.
+    //--------------------------------
+    $sql = "INSERT INTO contacto(nombre,email,celular,mensaje) VALUES('$nombre','$email',$celular,'$mensaje')";
+    mysqli_query($con, $sql);  
+
+    echo json_encode($nombre.'  '.$email.' '.$celular.' '.$mensaje);
+    // echo json_encode('Ingreso Correcto');
+
+
     
-    //TODO: Dirección
-    $destinatario = 'sistemas@mruvalcaba.com';
-    $asunto = 'Mensaje de sitio Web mruvalcaba.com';
-    //TODO: Para que acepte correo con HTML
-    $headers  = 'MIME-Version: 1.0' . "\r\n" .'Content-type: text/html; charset=utf-8' . "\r\n" .'From: ' . $correo . "\r\n";
 
-    if(mail($destinatario,$asunto,$cuerpo,$headers)){
+    // // TODO: Cuerpo del mensaje
+    // $cuerpo = 'Nombre: ' . $nombre . '<br>';
+    // $cuerpo .= 'Email: ' . $email . '<br>';
+    // $cuerpo .= 'Celular: ' . $celular . '<br>';
+    // $cuerpo .= 'Mensaje: ' . $mensaje . '<br>';
+    
+    // //TODO: Dirección
+    // $destinatario = 'sistemas@mruvalcaba.com';
+    // $asunto = 'Mensaje de sitio Web mruvalcaba.com';
+    // //TODO: Para que acepte correo con HTML
+    // $headers  = 'MIME-Version: 1.0' . "\r\n" .'Content-type: text/html; charset=utf-8' . "\r\n" .'From: ' . $correo . "\r\n";
 
-        echo json_encode(array(
-            'error' => false,
-            'campo' => "Correcto"
-         ));
-    }else{
-         echo json_encode(array(
-        'error' => true,
-        'campo' => 'Email'
-     ));
-    }
+    // if(mail($destinatario,$asunto,$cuerpo,$headers)){
+
+    //     echo json_encode(array(
+    //         'error' => false,
+    //         'campo' => "Correcto"
+    //      ));
+    // }else{
+    //      echo json_encode(array(
+    //     'error' => true,
+    //     'campo' => 'Email'
+    //  ));
+    // }
+
+    // echo json_encode(array(
+    //         'error' => false,
+    //         'campo' => "Correcto"
+    // ));
 
 }else{
 
-    echo json_encode(array(
-        'error' => true,
-        'campo' => 'Post'
-     ));
+    // echo json_encode(array(
+    //     'error' => true,
+    //     'campo' => 'Post'
+    //  ));
 }
 
     // echo json_encode($nombre.'  '.$email.' '.$celular.' '.$mensaje);    
