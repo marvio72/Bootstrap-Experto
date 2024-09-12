@@ -1,12 +1,10 @@
 <?php
+
 include('connection.php');
 $con = connection();
 
 
-// $sql = "SELECT * FROM contacto";
-// $query = mysqli_query($con, $sql);
-
-// echo json_encode('Hasta aqui todo bien');
+date_default_timezone_set("America/Puerto_Rico");
 
 if($_POST){
     // TODO: Declaramos variables
@@ -14,8 +12,9 @@ if($_POST){
     $email = '';
     $celular = '';
     $mensaje = '';
-    $fyh_creacion = '';
-    $estado = 1;
+    $fyh_creacion = FECHA_CREA;
+    $estado = ESTADO;
+
     
 
     // TODO: Validamos campos que vienen desde JavaScript
@@ -69,11 +68,13 @@ if($_POST){
     //--------------------------------
     //	TODO: Agregar registro en base de datos.
     //--------------------------------
-    $sql = "INSERT INTO contacto(nombre,email,celular,mensaje,fyh_creacion,estado) VALUES('$nombre','$email',$celular,'$mensaje', CURRENT_TIMESTAMP(), '$estado')";
+    // $sql = "INSERT INTO contacto(nombre,email,celular,mensaje,fyh_creacion,estado) VALUES('$nombre','$email',$celular,'$mensaje', CURRENT_TIMESTAMP(), '$estado')";
+    // mysqli_query($con, $sql);  
+    $sql = "INSERT INTO contacto(nombre,email,celular,mensaje,fyh_creacion,estado) VALUES('$nombre','$email',$celular,'$mensaje', '$fyh_creacion', '$estado')";
     mysqli_query($con, $sql);  
 
-    echo json_encode($nombre.'  '.$email.' '.$celular.' '.$mensaje);
-    // echo json_encode('Ingreso Correcto');
+    echo json_encode($nombre.'  '.$email.' '.$celular.' '.$mensaje.' '.$fyh_creacion.' '.BD_SERVIDOR);
+    
 
 
     
