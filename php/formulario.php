@@ -2,6 +2,7 @@
 include('connection.php');
 $con = connection();
 
+
 // $sql = "SELECT * FROM contacto";
 // $query = mysqli_query($con, $sql);
 
@@ -9,11 +10,12 @@ $con = connection();
 
 if($_POST){
     // TODO: Declaramos variables
-    $id = null;
     $nombre = '';
     $email = '';
     $celular = '';
     $mensaje = '';
+    $fyh_creacion = '';
+    $estado = 1;
     
 
     // TODO: Validamos campos que vienen desde JavaScript
@@ -67,7 +69,7 @@ if($_POST){
     //--------------------------------
     //	TODO: Agregar registro en base de datos.
     //--------------------------------
-    $sql = "INSERT INTO contacto(nombre,email,celular,mensaje) VALUES('$nombre','$email',$celular,'$mensaje')";
+    $sql = "INSERT INTO contacto(nombre,email,celular,mensaje,fyh_creacion,estado) VALUES('$nombre','$email',$celular,'$mensaje', CURRENT_TIMESTAMP(), '$estado')";
     mysqli_query($con, $sql);  
 
     echo json_encode($nombre.'  '.$email.' '.$celular.' '.$mensaje);
