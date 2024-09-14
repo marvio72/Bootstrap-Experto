@@ -208,7 +208,6 @@ $(function () {
         }
         campoValido(mensaje);
 
-        console.log("llego a comprobar");
         console.log(datos.error);
         if (!datos.error) {
           limpiaFormulario();

@@ -68,16 +68,10 @@ if($_POST){
     //--------------------------------
     //	TODO: Agregar registro en base de datos.
     //--------------------------------
-    // $sql = "INSERT INTO contacto(nombre,email,celular,mensaje,fyh_creacion,estado) VALUES('$nombre','$email',$celular,'$mensaje', CURRENT_TIMESTAMP(), '$estado')";
-    // mysqli_query($con, $sql);  
+    
     $sql = "INSERT INTO contacto(nombre,email,celular,mensaje,fyh_creacion,estado) VALUES('$nombre','$email',$celular,'$mensaje', '$fyh_creacion', '$estado')";
     mysqli_query($con, $sql);  
 
-    echo json_encode($nombre.'  '.$email.' '.$celular.' '.$mensaje.' '.$fyh_creacion.' '.BD_SERVIDOR);
-    
-
-
-    
 
     // // TODO: Cuerpo del mensaje
     // $cuerpo = 'Nombre: ' . $nombre . '<br>';
@@ -104,17 +98,15 @@ if($_POST){
     //  ));
     // }
 
-    // echo json_encode(array(
-    //         'error' => false,
-    //         'campo' => "Correcto"
-    // ));
+    echo json_encode(array(
+            'error' => false,
+            'campo' => "Correcto"
+    ));
 
 }else{
 
-    // echo json_encode(array(
-    //     'error' => true,
-    //     'campo' => 'Post'
-    //  ));
+    echo json_encode(array(
+        'error' => true,
+        'campo' => 'Post'
+     ));
 }
-
-    // echo json_encode($nombre.'  '.$email.' '.$celular.' '.$mensaje);    
