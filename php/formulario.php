@@ -4,7 +4,6 @@ include('connection.php');
 $con = connection();
 
 
-date_default_timezone_set("America/Puerto_Rico");
 
 if($_POST){
     // TODO: Declaramos variables
@@ -73,35 +72,31 @@ if($_POST){
     mysqli_query($con, $sql);  
 
 
-    // // TODO: Cuerpo del mensaje
-    // $cuerpo = 'Nombre: ' . $nombre . '<br>';
-    // $cuerpo .= 'Email: ' . $email . '<br>';
-    // $cuerpo .= 'Celular: ' . $celular . '<br>';
-    // $cuerpo .= 'Mensaje: ' . $mensaje . '<br>';
+    // TODO: Cuerpo del mensaje
+    $cuerpo = 'Nombre: ' . $nombre . '<br>';
+    $cuerpo .= 'Email: ' . $email . '<br>';
+    $cuerpo .= 'Celular: ' . $celular . '<br>';
+    $cuerpo .= 'Mensaje: ' . $mensaje . '<br>';
     
-    // //TODO: Dirección
-    // $destinatario = 'sistemas@mruvalcaba.com';
-    // $asunto = 'Mensaje de sitio Web mruvalcaba.com';
-    // //TODO: Para que acepte correo con HTML
-    // $headers  = 'MIME-Version: 1.0' . "\r\n" .'Content-type: text/html; charset=utf-8' . "\r\n" .'From: ' . $correo . "\r\n";
+    //TODO: Dirección
+    $destinatario = 'sistemas@mruvalcaba.com';
+    $asunto = 'Mensaje de sitio Web mruvalcaba.com';
+    //TODO: Para que acepte correo con HTML
+    $headers  = 'MIME-Version: 1.0' . "\r\n" .'Content-type: text/html; charset=utf-8' . "\r\n" .'From: ' . $correo . "\r\n";
 
-    // if(mail($destinatario,$asunto,$cuerpo,$headers)){
+    if(mail($destinatario,$asunto,$cuerpo,$headers)){
 
-    //     echo json_encode(array(
-    //         'error' => false,
-    //         'campo' => "Correcto"
-    //      ));
-    // }else{
-    //      echo json_encode(array(
-    //     'error' => true,
-    //     'campo' => 'Email'
-    //  ));
-    // }
-
-    echo json_encode(array(
+        echo json_encode(array(
             'error' => false,
             'campo' => "Correcto"
-    ));
+         ));
+    }else{
+         echo json_encode(array(
+        'error' => true,
+        'campo' => 'Email'
+     ));
+    }
+
 
 }else{
 
