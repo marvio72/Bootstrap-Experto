@@ -12,6 +12,7 @@ if($_POST){
     $celular = '';
     $mensaje = '';
     $fyh_creacion = FECHA_CREA;
+    $sitio = "OVERSISTEMAS";
     $estado = ESTADO;
 
     
@@ -68,7 +69,7 @@ if($_POST){
     //	TODO: Agregar registro en base de datos.
     //--------------------------------
     
-    $sql = "INSERT INTO contacto(nombre,email,celular,mensaje,fyh_creacion,estado) VALUES('$nombre','$email',$celular,'$mensaje', '$fyh_creacion', '$estado')";
+    $sql = "INSERT INTO contacto(nombre,email,celular,mensaje,fyh_creacion,sitio,estado) VALUES('$nombre','$email',$celular,'$mensaje', '$fyh_creacion', '$sitio', '$estado')";
     mysqli_query($con, $sql);  
 
 
